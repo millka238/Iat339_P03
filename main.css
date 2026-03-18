@@ -1,0 +1,305 @@
+/*
+  STYLE GUIDE STYLING 
+  Default styling for the style guide 
+*/
+*{
+  color: #2e2929;
+}
+body {
+  font-family: 'Abhaya Libre', serif;
+  font-weight: 500;
+  padding: 2rem;
+  background-color: #dbdbdb;
+  color: #3c3737;
+  margin: 0;
+  padding: 0;
+}
+section {
+  margin-bottom: 4rem;
+  color: #004525;
+}
+
+header{
+  background-color: #96acf1;
+  padding: 1rem;
+  text-align: center;
+}
+
+.element {
+  background-color: #9c8a78;
+  padding: 2rem;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 0.15rem solid black;
+}
+
+
+h1 {
+  font-size: 2.5rem;
+  font-family: "Aclonica", sans-serif;
+  color: #004525;
+  
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 4rem;
+  color: #004525;
+  margin-left: 2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  
+}
+
+h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  
+}
+
+
+p {
+  margin-top: 0;
+}
+
+nav a:hover, nav a:focus {
+  text-decoration: none;
+}
+
+code {
+  background-color: #EEE;
+  padding: 0.5rem;
+  display: block;
+}
+
+.email {
+  padding: 0.5rem;
+  border: 0.1rem solid #004525;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  font-family: 'Abhaya Libre', serif;
+  transition: 0.1s;
+}
+.email:hover{
+   border: 0.25rem solid #004525;
+
+}
+
+.radio-label {
+  font-size: 1rem;
+  margin-right: 1.5rem;
+  accent-color: #89140a; /* I learnt this from: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/accent-color */
+
+}
+.radio-label:hover{
+  accent-color: #18c172;
+}
+/* 
+  INTERACTIVE ELEMENTS -------------------
+*/
+
+.main-navigation{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+a {
+  color: #760b0b;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.product-listing {
+  max-width: 300px;
+  background: white;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  box-shadow: 0 4px 10px #004525;
+}
+a:hover,
+a:focus {
+  color: #004525;
+  text-decoration: none;
+}
+
+.button-nav {
+  display: inline-block;
+  padding: 0.5rem;
+  color: white;
+  background-color: #004525;
+  text-decoration: none;
+  transition-duration: 0.5s;
+  border-radius: 0.8rem;
+}
+
+.button-nav:hover, .button-nav:focus {
+  background-color: rgb(200,200,200);
+}
+
+.button-submit {
+  background-color: #004525;
+  color: white;
+}
+
+.button-submit:hover,
+.button-submit:focus {
+  background-color: #980d0d;
+  outline: none;
+}
+
+.name-card {
+  padding: 0.5rem;
+  border: 0.1rem solid #004525;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  font-family: 'Abhaya Libre', serif;
+  transition: 0.1s;
+  margin-bottom: 1rem;
+}
+.name-card:hover {
+   border: 0.25rem solid #004525;
+
+}
+
+/* Reset button */
+.button-reset {
+  background-color: #9c8a78;
+  color: black;
+}
+
+.button-reset:hover,
+.button-reset:focus {
+  background-color: #004525;
+  color: white;
+  outline: none;
+}
+
+.image-link img {
+  transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
+  border-radius: 0.6rem;
+}
+
+/* Hover + keyboard focus */
+.image-link:hover img,
+.image-link:focus img {
+  transform: scale(1.05);
+  opacity: 0.85;
+  box-shadow: 0 0 0 4px #004525;
+}
+
+
+
+/* 
+  TEXT ELEMENTS -------------------
+*/
+
+.numbered-list li{
+  margin-bottom: 1rem;
+  color: #520505;
+}
+
+/* 
+  COMBINED ELEMENTS -------------------
+*/
+
+.checkout-template {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 10px #004525;  
+  margin-top: 4rem;
+
+}
+
+.checkout-title {
+  border-bottom: 1px solid #004525;
+}
+.button-pay {
+  background-color: #004525;
+  color: white;
+}
+
+.button-pay:hover,
+.button-pay:focus {
+  background-color: #980d0d;
+  outline: none;
+}
+
+
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-listing {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 100%;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  box-shadow: 0 4px 10px #004525;
+}
+
+.product-listing img {
+  width: 100%;
+  max-height: 1000px;
+  
+}
+
+.payment-section {
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.radio-label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+
+
+/* RESPONSIVE VIEW */
+
+@media (max-width: 48rem) {
+
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  
+
+  .main-navigation {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+   .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 58.25rem) {
+
+.image-reference {
+  width: 100%;
+  height: auto;
+}
+}
