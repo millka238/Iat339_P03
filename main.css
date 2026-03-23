@@ -2,31 +2,40 @@
   STYLE GUIDE STYLING 
   Default styling for the style guide 
 */
+
+  
+@font-face {
+  font-family: 'GT Eesti Text';
+  src: url('fonts/GT-Eesti-Text-Light-Trial.otf') format('opentype');
+}
 *{
-  color: #2e2929;
+  font-family: 'GT Eesti Text', 'Abhaya Libre', sans-serif;
+  color: #302F2F;
 }
 body {
-  font-family: 'Abhaya Libre', serif;
+    background-color: #E5E5E5;
   font-weight: 500;
   padding: 2rem;
-  background-color: #dbdbdb;
-  color: #3c3737;
   margin: 0;
   padding: 0;
 }
 section {
   margin-bottom: 4rem;
-  color: #004525;
 }
 
 header{
-  background-color: #96acf1;
+   background-image: linear-gradient(
+      255deg,
+      #facb0e,
+      #f06ba8 30%,
+      #78bae6 65%,
+      #fff
+    );
   padding: 1rem;
-  text-align: center;
 }
 
 .element {
-  background-color: #9c8a78;
+   background: rgba(177, 177, 177, 0.8);     
   padding: 2rem;
   margin-top: 2rem;
   padding-bottom: 2rem;
@@ -36,15 +45,13 @@ header{
 
 h1 {
   font-size: 2.5rem;
-  font-family: "Aclonica", sans-serif;
-  color: #004525;
+  padding: 2rem;
   
 }
 
 h2 {
   font-size: 2rem;
   margin-top: 4rem;
-  color: #004525;
   margin-left: 2rem;
 }
 
@@ -77,26 +84,55 @@ code {
 
 .email {
   padding: 0.5rem;
-  border: 0.1rem solid #004525;
-  border-radius: 0.4rem;
+  border: 0.1rem solid #656565;
+  border-radius: 0.5rem;
   font-size: 1rem;
-  font-family: 'Abhaya Libre', serif;
-  transition: 0.1s;
 }
 .email:hover{
-   border: 0.25rem solid #004525;
+   border: 0.1rem solid #1b1a1a;
 
 }
 
-.radio-label {
-  font-size: 1rem;
-  margin-right: 1.5rem;
-  accent-color: #89140a; /* I learnt this from: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/accent-color */
+.radio {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  gap: 10px;
+}
 
+.radio input {
+  display: none;
 }
-.radio-label:hover{
-  accent-color: #18c172;
+
+/*learnt how to style custom radio buttons here: https://gist.github.com/Cutcopy/3fce01b4e66c4663ef27*/
+.custom-radio {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #787878;
+  border-radius: 50%;
+  position: relative;
 }
+
+.radio input:hover + .custom-radio, .radio input:focus + .custom-radio {
+  border-color: #302F2F;
+}
+
+.radio input:checked + .custom-radio {
+  border-color: #302F2F;
+}
+
+.radio input:checked + .custom-radio::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #302F2F;
+  border-radius: 50%; /*changed roundness of buttons: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-radius */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);/*https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/translate*/
+}
+
 /* 
   INTERACTIVE ELEMENTS -------------------
 */
@@ -116,28 +152,20 @@ a {
   text-decoration: none;
 }
 
-.product-listing {
-  max-width: 300px;
-  background: white;
-  padding: 1rem;
-  border-radius: 0.8rem;
-  text-align: center;
-  box-shadow: 0 4px 10px #004525;
-}
 a:hover,
 a:focus {
-  color: #004525;
+  color: #302F2F;
   text-decoration: none;
 }
 
 .button-nav {
   display: inline-block;
-  padding: 0.5rem;
-  color: white;
-  background-color: #004525;
+  padding: 1rem;
+  color: #302F2F;
+  border: 1.5px solid #302F2F;
   text-decoration: none;
-  transition-duration: 0.5s;
-  border-radius: 0.8rem;
+  transition-duration: 0.3s;
+  border-radius: 1.7rem;
 }
 
 .button-nav:hover, .button-nav:focus {
@@ -145,25 +173,29 @@ a:focus {
 }
 
 .button-submit {
-  background-color: #004525;
-  color: white;
+  display: inline-block;
+  padding: 0.9rem;
+  color: #302F2F;
+  border: 1.5px solid #302F2F;
+  text-decoration: none;
+  transition-duration: 0.3s;
+  border-radius: 1.4rem;
 }
 
 .button-submit:hover,
 .button-submit:focus {
-  background-color: #980d0d;
-  outline: none;
+   background-color: rgb(200,200,200);
 }
 
 .name-card {
   padding: 0.5rem;
   border: 0.1rem solid #004525;
-  border-radius: 0.4rem;
+  border-radius: 1.5rem;
   font-size: 1rem;
-  font-family: 'Abhaya Libre', serif;
   transition: 0.1s;
   margin-bottom: 1rem;
 }
+
 .name-card:hover {
    border: 0.25rem solid #004525;
 
@@ -171,28 +203,29 @@ a:focus {
 
 /* Reset button */
 .button-reset {
-  background-color: #9c8a78;
-  color: black;
+  display: inline-block;
+  padding: 0.9rem;
+  color: #302F2F;
+  border: 1.5px solid #302F2F;
+  text-decoration: none;
+  transition-duration: 0.3s;
+  border-radius: 1.4rem;
 }
 
 .button-reset:hover,
 .button-reset:focus {
-  background-color: #004525;
-  color: white;
-  outline: none;
+   background-color: rgb(200,200,200);
 }
 
 .image-link img {
   transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
-  border-radius: 0.6rem;
+  border-radius: 1.5rem;
 }
 
 /* Hover + keyboard focus */
 .image-link:hover img,
 .image-link:focus img {
-  transform: scale(1.05);
   opacity: 0.85;
-  box-shadow: 0 0 0 4px #004525;
 }
 
 
@@ -210,56 +243,52 @@ a:focus {
   COMBINED ELEMENTS -------------------
 */
 
-.checkout-template {
-  background-color: #ffffff;
-  padding: 1rem;
-  border-radius: 0.8rem;
-  box-shadow: 0 4px 10px #004525;  
-  margin-top: 4rem;
-
-}
-
-.checkout-title {
-  border-bottom: 1px solid #004525;
-}
-.button-pay {
-  background-color: #004525;
-  color: white;
-}
-
-.button-pay:hover,
-.button-pay:focus {
-  background-color: #980d0d;
-  outline: none;
-}
-
-
-
-.product-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
-}
 
 .product-listing {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  max-width: 100%;
-  background: white;
-  padding: 1.5rem;
-  border-radius: 0.8rem;
-  text-align: center;
-  box-shadow: 0 4px 10px #004525;
+  position: relative;
+  width: 34.375rem;
+  border-radius: 1.5rem;
+  overflow: hidden; 
 }
 
 .product-listing img {
   width: 100%;
-  max-height: 1000px;
+  max-height: 40rem;
+  display: block;
+  object-fit: cover;
   
 }
 
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
+  padding: 1.5rem;
+
+  display: flex;
+  align-items: center;   
+  justify-content: flex-start; 
+
+  box-sizing: border-box; 
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.4),
+    rgba(255,255,255,0.1)
+  );
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-top: 1px solid rgba(255,255,255,0.2);
+
+  color: white;
+}
+
+.overlay h3 {
+  color: white;
+  font-weight: 500;
+}
 .payment-section {
   gap: 0.5rem;
   margin-top: 2rem;
