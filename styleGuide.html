@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>P03 - Style Guide Template</title>
+    <link href="main.css" rel="stylesheet">
+   
+  </head>
+
+  <body>
+
+    <header class = "styleGuide">
+      <h1>P03 - Style Guide Template - Portfolio</h1>
+
+      <nav>        
+        <a href="#interactive_elements">INTERACTIVE ELEMENTS</a>
+        <a href="#text_elements">TEXT ELEMENTS</a>
+        <a href="#combined_elements">COMBINED ELEMENTS</a>
+        <a href="#branding">BRANDING IDEAS</a>
+        <a href="#brand_components">BRAND COMPONENTS</a>
+      </nav>
+    </header>
+
+
+    <!-- INTERACTIVE ELEMENTS SECTION // -->
+    <section id="interactive_elements">
+      <h2>Interactive Elements</h2>
+
+
+      <section class="element">
+        <h3>In-text link</h3>
+
+         <p>
+        Learn more about <a href="#">project</a>.
+        </p>
+
+        <h4>Sample code:</h4>
+        <code>&lt;a href="#"&gt;project&lt;/a&gt;</code>
+      </section>
+
+
+      <!-- Default Button styling section -->
+      <section class="element">
+
+        <h3>Navigation Link</h3>
+
+        <h4>CSS selector:</h4>
+        <p>.button-nav</p>
+
+        <h4>Sample code:</h4>
+        <code>&lt;a href="#" class="button"&gt;Explore&lt;/a&gt;</code>
+
+        <h4>Rendered element:</h4>
+        <a class="button-nav" href="#">Explore</a>
+
+      </section>
+
+
+      <section class="element">
+        <h3>Submit/Reset Buttons</h3>
+
+        <h4>CSS selector:</h4>
+        <p>.button-submit</p>   
+        <h4>Sample code:</h4>
+        <code>
+        &lt;button class="button-submit" type="submit"&gt;Submit&lt;/button&gt;<br>
+        &lt;button class="button-reset" type="reset"&gt;Reset&lt;/button&gt;
+      </code>
+
+        <h4>Rendered elements:</h4>
+
+        <button class="button-submit" type="submit">Submit</button>
+        <button class="button-reset" type="reset">Reset</button>
+      </section>
+
+
+      <section class="element">
+          <h3>Text Input Field with Label</h3>
+          
+          <label for="email">Email Address:</label>
+          <input type="text" id="email" class="email">
+
+          <h4>Sample code:</h4>
+          <code>
+            &lt;label for="email"&gt;Email Address:&lt;/label&gt;<br>
+            &lt;input type="text" id="email" class="email"&gt;
+          </code>
+      </section>
+
+
+      <section class="element">
+         <h3>Radio Button with Label</h3>
+        <label class="radio">
+        <input type="radio" name="plan">
+        <span class="custom-radio"></span>
+        Example
+        </label>
+
+      <h4>Sample code:</h4>
+      <code>
+        &lt;label class="radio"&gt;<br>
+        &lt;input type="radio" name="plan"&gt;<br>
+        &lt;span class="custom-radio"&gt;&lt;/span&gt;<br>
+        Example<br>
+        &lt;/label&gt;
+      </code>
+      </section>
+
+
+      <section class="element">
+        <h3>Image as a Link</h3>
+        <a href="#" class="image-link">
+        <img src="images/iat339WEB.jpg" alt="Screenshot of the landing page of iat339 Website project" width="700" height="400">
+      </a>
+
+      <h4>Sample code:</h4>
+      <code>
+        &lt;a href="#" class="image-link"&gt;<br>
+        &lt;img src="images/iat339WEB.jpg" alt="Screenshot of the landing page of iat339 Website project" width="700" height="400"&gt;<br>
+        &lt;/a&gt;
+      </code>
+      </section>
+
+
+    </section>
+    <!-- // INTERACTIVE ELEMENTS SECTION -->
+
+
+
+    <!-- TEXT ELEMENTS SECTION // -->
+    <section id="text_elements">
+      <h2>Text Elements</h2>
+
+      <section class="element">
+        <h3>Headings</h3>
+
+        <h2>Heading Level 2</h2>
+        <h3>Heading Level 3</h3>
+        <h4>Heading Level 4</h4>
+        <h5>Heading Level 5</h5>
+
+        <h4>Sample code:</h4>
+        <code>
+          &lt;h2&gt;Heading Level 2&lt;/h2&gt;<br>
+          &lt;h3&gt;Heading Level 3&lt;/h3&gt;<br>
+          &lt;h4&gt;Heading Level 4&lt;/h4&gt;<br>
+          &lt;h5&gt;Heading Level 5&lt;/h5&gt;
+        </code>
+
+      </section>
+
+      <section class="element">
+        <h3>Paragraphs</h3>
+
+        <p>
+       Web developer with skills in both UI/UX design and coding. I build responsive, user-friendly websites that balance aesthetics and performance
+        </p>
+         <h4>Sample code:</h4>
+        <code>
+          &lt;p&gt;
+          Web developer with skills in both UI/UX design and coding. I build responsive, user-friendly websites that balance aesthetics and performance
+          &lt;/p&gt;
+        </code>
+      </section>
+
+      <section class="element">
+        <h3>Numbered Lists</h3>
+          <ol class = "numbered-list">
+            <li>1st Project </li>
+            <li>2nd Project</li>
+            <li>3rd Project</li>
+          </ol>
+
+          <h4>Sample code:</h4>
+          <code>
+            &lt;ol class = "numbered-list"&gt;<br>
+            &lt;li&gt;1st Project&lt;/li&gt;<br>
+            &lt;li&gt;2nd Project&lt;/li&gt;<br>
+            &lt;li&gt;3rd Project&lt;/li&gt;<br>
+            &lt;/ol&gt;
+          </code>
+
+      </section>
+
+    </section>
+    <!-- // TEXT ELEMENTS SECTION -->
+
+
+
+    <!-- COMBINED ELEMENTS SECTION // -->
+    <section id="combined_elements">
+      <h2>Combined Elements</h2>
+
+      <section class="element">
+        <h3>Main Navigation</h3>
+        <nav>
+        <ul class = "main-navigation">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">1st Project</a></li>
+          <li><a href="#">2nd Project</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+
+      <h4>Sample code:</h4>
+      <code>
+        &lt;nav&gt;<br>
+       &lt;ul class = "main-navigation"&gt;<br>
+       &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+       &lt;li&gt;&lt;a href="#"&gt;1st Project&lt;/a&gt;&lt;/li&gt;<br>
+       &lt;li&gt;&lt;a href="#"&gt;2nd Project&lt;/a&gt;&lt;/li&gt;<br>
+       &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;<br>
+       &lt;/ul&gt;<br>
+       &lt;/nav&gt;
+      </code>
+
+      </section>
+
+      <section class="element">
+        <h3>Product/Service Listing</h3>
+        <section class="product-grid">
+      <div class="product-listing">
+  <img src="images/iat339WEB.jpg" alt="A screenshot of the landing page of iat339 Website project">
+  <div class="overlay">
+    <h3>MaPastry Website</h3>
+  </div>
+</div>
+      </section>
+
+    <!-- // COMBINED ELEMENTS SECTION -->
+
+
+
+     <!-- // BRANDING IDEAS -->
+      <h2>Basic Branding Ideas</h2>
+      <section id ="branding" class = "element">
+
+          <h3>Web Designer/Developer</h3>
+          <p> 
+            Web developer with skills in both UI/UX design and coding. I build responsive, user-friendly websites that balance aesthetics and performance.
+          </p>
+
+          <h3>Who is the audience for your portfolio?</h3>
+            <p>
+             The audience for my portfolio is design employers, recruiters, and companies looking for UI/UX or digital designers. These people want to see examples of my design process and the skills I can bring to their team.
+            </p>
+
+
+            <h3>Project 1 (MaPastry) description</h3>
+            <p><strong>Year:</strong> 2026</p>
+            <p><strong>Timeframe:</strong> 3 weeks</p>
+            <p><strong>Tools:</strong> Figma, Visual Studio</p>
+            <p><strong>Category:</strong> Web Design & Development</p>
+ 
+            <h3>Design Intent</h3>
+        <p>
+            Create a simple, intuitive experience that allows users to easily explore the brand and take action. 
+            Focus on clear navigation, strong visual hierarchy, and a warm, cohesive aesthetic that reflects Maple Syrup Pastry. 
+            Highlight the bakery’s unique concept through distinctive design choices, creating a memorable and modern experience 
+            that feels both convenient and refined.
+        </p>
+
+         <h3>Problem</h3>
+        <p>
+            Local bakery websites often lack clear structure and personality. Menus can be hard to browse, 
+            product details are limited, and the overall experience feels generic. Users may struggle to quickly 
+            understand what makes the bakery unique or how to place an order.
+        </p>
+
+        <h3>Solution</h3>
+
+        <div>
+            <h4>Strong Visual Identity</h4>
+            <p>
+                A warm, distinctive design system that reflects the maple syrup concept, 
+                making the brand feel unique and memorable.
+            </p>
+        </div>
+
+        <div>
+            <h4>Simplified Navigation</h4>
+            <p>
+                Minimal, intuitive layout that helps users move easily between menu, story, 
+                and ordering without confusion.
+            </p>
+        </div>
+
+        <div>
+            <h4>Focused Conversion Points</h4>
+            <p>
+                Clear calls to action like “Order now”, guiding users toward quick decisions.
+            </p>
+        </div>
+
+        <div>
+            <h4>Brand Storytelling</h4>
+            <p>
+                Dedicated sections to communicate the concept and uniqueness of the bakery, 
+                building emotional connection and trust.
+            </p>
+        </div>
+
+
+
+        <h3>Landing Pages Design Project</h3>
+
+        <h3>Overview / Context</h3>
+        <p>
+            A one-page landing design created as part of a 4-day intensive course.
+            The goal was to design visually appealing and user-friendly landing pages for different companies.
+        </p>
+        <p>
+            This project was part of a short design sprint that simulated real-world UI/UX tasks. 
+            I worked individually and applied basic principles of layout, typography, and visual hierarchy.
+        </p>
+
+        <h3>The Problem / Goal</h3>
+        <p>
+            The challenge was to design a simple yet engaging landing page that would attract users 
+            and encourage them to sign up.
+        </p>
+        <p>
+            The goal was to make the interface clean, consistent, and modern while reflecting the wellness theme.
+        </p>
+
+        <h3>Process</h3>
+        <p>
+            I followed step-by-step tutorials to learn how to create this design. 
+            Through the process, I practiced building layouts, choosing colors and typography, 
+            and understanding how small design decisions affect the overall user experience.
+        </p>
+
+        <h3>UI design</h3>
+        <img src="images/landingPage.png" class="image-reference" alt="First landing Page design" width="900" height="550">
+        <img src="images/img5.png" class="image-reference" alt="Second landing Page design" width="900" height="550">
+        <img src="images/img6.png" class="image-reference" alt="Third landing Page design" width="900" height="550">
+        <img src="images/img7.png" class="image-reference" alt="Fourth landing Page design" width="900" height="550">
+         <img src="images/img8.png" class="image-reference" alt="Fifth landing Page design" width="900" height="550">
+        <!-- // BRANDING IDEAS -->
+
+      
+
+      <!-- // BRAND COMPONENTS -->
+        <h2>Brand Components</h2>
+        <section id ="brand_components" class ="element">
+
+          <h3>Fonts</h3>
+          <ul>
+            <li>Headings + Body Text: GT Eesti Text Trial</li>
+          </ul>
+
+          <h3>Colour Palette</h3>
+          
+          <img src="images/palette.png" class="image-reference" alt="Color Palette" width="900" height="450">
+
+          <h3>Imagery/Art Direction</h3>
+           <img src="images/imagery.png" class="image-reference" alt="Sample of landing page" width="900" height="550">
+          <img src="images/mockup.png" class="image-reference" alt="Sample of landing page" width="900" height="600">
+
+
+        </section>
+      <!-- // BRAND COMPONENTS -->
+
+
+        <!-- // CITATIONS -->
+  <section id="citations">
+  <h2>Citations</h2>
+
+ 
+   
+</section>
+<!-- // CITATIONS -->
+  </body>
+</html>

@@ -8,14 +8,19 @@
   font-family: 'GT Eesti Text';
   src: url('fonts/GT-Eesti-Text-Light-Trial.otf') format('opentype');
 }
+
+@font-face {
+  font-family: "Geoform-Light";
+  src: local("fonts/Geoform-Light-BF6556c6e751770.otft") format('opentype');
+}
 *{
-  font-family: 'GT Eesti Text', 'Abhaya Libre', sans-serif;
+  font-family: 'GT Eesti Text', sans-serif;
   color: #302F2F;
 }
 body {
-    background-color: #E5E5E5;
+  font-family: 'GT Eesti Text', sans-serif;
+  background-color: #E5E5E5;
   font-weight: 500;
-  padding: 2rem;
   margin: 0;
   padding: 0;
 }
@@ -23,7 +28,7 @@ section {
   margin-bottom: 4rem;
 }
 
-header{
+.styleGuide header{
    background-image: linear-gradient(
       255deg,
       #facb0e,
@@ -332,3 +337,697 @@ a:focus {
   height: auto;
 }
 }
+
+
+
+/* -----------------------------
+   FONTS
+----------------------------- */
+
+@font-face {
+  font-family: 'GT Eesti Text';
+  src: url('fonts/GT-Eesti-Text-Light-Trial.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "Geoform-Light";
+  src: url("fonts/Geoform-Light-BF6556c6e751770.otf") format("opentype");
+}
+
+/* -----------------------------
+   GLOBAL RESET
+----------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'GT Eesti Text', sans-serif;
+  background-color: #E5E5E5;
+  color: #302F2F;
+  padding: 0;
+}
+
+/* -----------------------------
+   TYPOGRAPHY
+----------------------------- */
+
+h1, h2, h3, h4 {
+  font-family: 'GT Eesti Text', sans-serif;
+}
+
+h1 {
+   font-size: 6vw;
+  white-space: nowrap;
+  font-weight: 300; 
+}
+
+h2 {
+  font-size: 6vw;
+  white-space: nowrap;
+  font-weight: 300; 
+}
+
+h3{
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+p {
+  font-family: "Geoform-Light", sans-serif;
+}
+
+/* -----------------------------
+   NAVIGATION
+----------------------------- */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem 8rem;
+  padding-right: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.logo-text h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* email */
+.logo-text p {
+  font-size: 1.2rem;
+  color: #ABABAB; 
+  margin: 0;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #302F2F;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  opacity: 0.6;
+}
+
+/* -----------------------------
+   HERO SECTION
+----------------------------- */
+
+
+/* gradient strip image */
+.hero-bg {
+  position: absolute;
+  top: 12%;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+/* text on top */
+.hero-content {
+
+  position: relative;
+  z-index: 1;
+  max-width: 56.25rem;
+}
+
+.hero-content h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  white-space: nowrap;
+  padding-left: 6rem;
+
+}
+
+.subtitle {
+  padding-left: 7rem;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+/* -----------------------------
+   MAIN LAYOUT
+----------------------------- */
+
+main {
+  max-width: none;
+  margin: 2rem 4rem;
+}
+
+/* -----------------------------
+   PROJECTS SECTION
+----------------------------- */
+.projects {
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* BIG blurred background text */
+.projects-bg {
+  position: absolute;
+  font-size: 8rem;
+  letter-spacing: 0.05em;;
+  color: rgba(0,0,0,0.30);
+  filter: blur(3px);
+  z-index: 0;
+  padding-top: 0.5rem;
+}
+
+/* row layout (NOT grid anymore) */
+.project-row {
+  padding-top: 4rem;
+  display: flex;
+  margin: 6rem auto 0;
+  max-width: 1200px;
+  justify-content: center;
+}
+
+.project-card {
+  flex: 0 0 550px;
+  transition: 0.3s;
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card:hover {
+  transform:translateY(-8px);
+}
+
+
+/* -----------------------------
+   FOOTER
+----------------------------- */
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* -----------------------------
+   RESPONSIVE
+----------------------------- */
+
+@media (max-width: 768px) {
+
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content h2 {
+    font-size: 2.2rem;
+  }
+
+}
+
+
+
+
+/* ============================================================
+   PROJECT DETAIL PAGES  (mapastry.html / landing-pages.html)
+   Append this block to the bottom of main.css
+   ============================================================ */
+ 
+ 
+/* ---- HERO ---- */
+ 
+.project-hero {
+  padding: 0;
+}
+ 
+.project-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  padding-left: 6rem;
+}
+ 
+.project-title-row h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+ 
+}
+ 
+
+ .hero-bgPR {
+  position: absolute;
+  top:7%;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  opacity: 85%;
+    filter: blur(15px);
+}
+ 
+
+ 
+/* ---- TAGLINE ---- */
+ 
+.project-tagline {
+    padding-left:8rem;
+
+  position: relative;
+  z-index: 1;
+}
+ 
+.project-tagline h2 {
+  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  font-weight: 300;
+  margin: 0;
+  white-space: normal;
+  line-height: 1.6;
+  color: #444;
+}
+ 
+ 
+/* ---- CONTENT SECTIONS ---- */
+ 
+/* ============================================================
+   PROJECT DETAIL — two-column text/image sections
+   ============================================================ */
+
+/* Title + button on the same line */
+.project-title-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+/* "Link to Website ↗" pill button */
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.45rem 1rem;
+  font-size: 0.85rem;
+  color: #302F2F;
+  border: 1.5px solid rgba(48, 47, 47, 0.45);
+  border-radius: 2rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: 0.2s, border-color 0.2s;
+  align-self: center;
+  margin-top: 0.3rem;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+  background: rgba(48, 47, 47, 0.07);
+  border-color: #302F2F;
+  color: #302F2F;
+}
+
+/* Two-column section: image | text  OR  text | image */
+.project-block.two-col-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Text column — vertically centred, text centred */
+.project-block-text.centered-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-block-text.centered-text p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #444;
+  max-width: 20rem;
+}
+
+.project-block.two-col-text img {
+  max-width: 100%;
+  max-height: 50rem;
+  padding-left: 5rem;
+}
+
+/* Section headings inside content blocks */
+.section-heading {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #302F2F;
+  text-align: center;
+}
+
+
+/* Each Solution sub-item */
+.solution-item {
+  margin-top: 1.2rem;
+  text-align: center;
+}
+
+.solution-item h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 0.3rem;
+  color: #302F2F;
+}
+
+.solution-item p {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+/* Phone image — bigger, pushed to the right edge */
+.project-block-visual {
+  display: flex;
+  justify-content: flex-end;   /* align to right */
+}
+
+.project-block-visual img {
+  max-width: 100%; 
+  padding-right: 15rem;                /* take up most of the column */
+
+}
+
+
+.showcase{
+     display: grid;
+     grid-template-columns: 1fr;
+     justify-content: center;
+    margin: 4rem;
+
+}
+
+.showcase img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.project-block.two-col-text2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Text column — vertically centred, text centred */
+.project-block-text.centered-text2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-block-text.centered-text2 p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #444;
+  max-width: 20rem;
+}
+
+.project-block.two-col-text2 img {
+  max-width: 100%;
+  max-height: 50rem;
+  padding-left: 10rem;
+}
+
+.project-block-visual2 img {
+  max-width: 100%; 
+   padding-right: 7rem;            /* take up most of the column */
+
+}
+
+.analysis {
+  display: flex;
+  justify-content: center;   /* centers the whole block */
+  gap: 5rem;
+}
+
+.column {
+  max-width: 18rem;
+}
+
+.challenges li{
+    padding-top: 1rem;
+      font-family: "Geoform-Light", sans-serif;
+}
+
+.column p{
+    padding-top: 1rem;
+    line-height: 1.5rem;
+}
+/* Footer nav — fix padding so links aren't cut off */
+.project-footer-nav {
+  padding: 3rem 4rem 2rem;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(48, 47, 47, 0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-footer-nav a {
+  padding: 0;
+  font-size: 0.9rem;
+  color: #302F2F;
+  text-decoration: none;
+}
+
+.refl{
+   display: flex;
+    flex-direction: column;  
+    align-items: center;      /* centers horizontally */
+    text-align: center;
+}
+
+.refl p{
+    padding-top: 1rem;
+    max-width: 45rem;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 700px) {
+  .project-block.two-col-text {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-title-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .project-footer-nav {
+    padding: 2rem 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+}
+
+
+ .hero-bg{
+      position: absolute;
+      top: 4rem;
+      left: 0;
+      width: 100%;
+      z-index: 0;
+      opacity: 85%;
+      filter: blur(15px);
+      pointer-events: none;
+    }
+
+    .about-content {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+      gap: 5rem;
+      margin: 0 4rem 4rem;
+      padding-top: 2rem;
+    }
+
+    .about-photo img {
+      width: 100%;
+      max-width: 37rem;
+      object-fit: cover;
+      display: block;
+    }
+
+    .about-text {
+      padding-top: 1rem;
+    }
+
+    .about-greeting {
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: #302F2F;
+    }
+
+    .about-bio {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #444;
+      margin-bottom: 2.5rem;
+    }
+
+    .about-bio strong {
+      font-weight: 700;
+      color: #302F2F;
+    }
+
+    .about-edu {
+      display: flex;
+      gap: 2rem;
+      align-items: baseline;
+      margin-bottom: 0.5rem;
+    }
+
+    .about-section-label {
+      font-size: 0.95rem;
+      color: #302F2F;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .about-edu-year {
+      font-size: 1rem;
+      color: #888;
+      white-space: nowrap;
+    }
+
+    .about-edu-detail {
+      margin-bottom: 2.5rem;
+    }
+
+    .about-edu-detail h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #302F2F;
+      margin-bottom: 0.2rem;
+    }
+
+    .about-edu-detail p {
+      font-size: 0.95rem;
+      color: #555;
+      margin: 0;
+    }
+
+    .about-resume {
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-resume {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      padding: 0.75rem 1.2rem;
+      font-size: 1rem;
+      color: #302F2F;
+      border: 1.5px solid rgba(48, 47, 47, 0.45);
+      border-radius: 2rem;
+      text-decoration: none;
+      white-space: nowrap;
+      min-width: 14rem;
+      transition:  0.2s, border-color 0.2s;
+    }
+
+    .btn-resume:hover,
+    .btn-resume:focus {
+      background: rgba(48, 47, 47, 0.07);
+      border-color: #302F2F;
+      color: #302F2F;
+    }
+
+    .btn-resume .arrow {
+      font-size: 1.1rem;
+    }
+
+    .about-contacts h4 {
+      font-size: 1rem;
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: 0;
+      margin-bottom: 0.9rem;
+      color: #302F2F;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .contact-item svg {
+      flex-shrink: 0;
+      width: 1.2rem;
+      height: 1.2rem;
+      stroke: #302F2F;
+    }
+
+    @media (max-width: 768px) {
+      .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 0 1.5rem 3rem;
+      }
+
+      .about-photo img {
+        max-width: 100%;
+      }
+    }
