@@ -1,348 +1,3 @@
-/*
-  STYLE GUIDE STYLING 
-  Default styling for the style guide 
-*/
-
-  
-@font-face {
-  font-family: 'GT Eesti Text';
-  src: url('fonts/GT-Eesti-Text-Light-Trial.otf') format('opentype');
-}
-
-@font-face {
-  font-family: "Geoform-Light";
-  src: local("fonts/Geoform-Light-BF6556c6e751770.otft") format('opentype');
-}
-*{
-  font-family: 'GT Eesti Text', sans-serif;
-  color: #302F2F;
-}
-body {
-  font-family: 'GT Eesti Text', sans-serif;
-  background-color: #E5E5E5;
-  font-weight: 500;
-  margin: 0;
-  padding: 0;
-}
-section {
-  margin-bottom: 4rem;
-}
-
-.styleGuide header{
-   background-image: linear-gradient(
-      255deg,
-      #facb0e,
-      #f06ba8 30%,
-      #78bae6 65%,
-      #fff
-    );
-  padding: 1rem;
-}
-
-.element {
-   background: rgba(177, 177, 177, 0.8);     
-  padding: 2rem;
-  margin-top: 2rem;
-  padding-bottom: 2rem;
-  border-top: 0.15rem solid black;
-}
-
-
-h1 {
-  font-size: 2.5rem;
-  padding: 2rem;
-  
-}
-
-h2 {
-  font-size: 2rem;
-  margin-top: 4rem;
-  margin-left: 2rem;
-}
-
-h3 {
-  font-size: 1.4rem;
-  
-}
-
-h4 {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  
-}
-
-
-p {
-  margin-top: 0;
-}
-
-nav a:hover, nav a:focus {
-  text-decoration: none;
-}
-
-code {
-  background-color: #EEE;
-  padding: 0.5rem;
-  display: block;
-}
-
-.email {
-  padding: 0.5rem;
-  border: 0.1rem solid #656565;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-}
-.email:hover{
-   border: 0.1rem solid #1b1a1a;
-
-}
-
-.radio {
-  display: flex;
-  align-items: center;
-  font-size: 1.125rem;
-  gap: 10px;
-}
-
-.radio input {
-  display: none;
-}
-
-/*learnt how to style custom radio buttons here: https://gist.github.com/Cutcopy/3fce01b4e66c4663ef27*/
-.custom-radio {
-  width: 15px;
-  height: 15px;
-  border: 2px solid #787878;
-  border-radius: 50%;
-  position: relative;
-}
-
-.radio input:hover + .custom-radio, .radio input:focus + .custom-radio {
-  border-color: #302F2F;
-}
-
-.radio input:checked + .custom-radio {
-  border-color: #302F2F;
-}
-
-.radio input:checked + .custom-radio::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  background: #302F2F;
-  border-radius: 50%; /*changed roundness of buttons: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-radius */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);/*https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/translate*/
-}
-
-/* 
-  INTERACTIVE ELEMENTS -------------------
-*/
-
-.main-navigation{
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 2rem;
-}
-
-a {
-  color: #760b0b;
-  padding: 0.8rem;
-  font-size: 1.1rem;
-  text-decoration: none;
-}
-
-a:hover,
-a:focus {
-  color: #302F2F;
-  text-decoration: none;
-}
-
-.button-nav {
-  display: inline-block;
-  padding: 1rem;
-  color: #302F2F;
-  border: 1.5px solid #302F2F;
-  text-decoration: none;
-  transition-duration: 0.3s;
-  border-radius: 1.7rem;
-}
-
-.button-nav:hover, .button-nav:focus {
-  background-color: rgb(200,200,200);
-}
-
-.button-submit {
-  display: inline-block;
-  padding: 0.9rem;
-  color: #302F2F;
-  border: 1.5px solid #302F2F;
-  text-decoration: none;
-  transition-duration: 0.3s;
-  border-radius: 1.4rem;
-}
-
-.button-submit:hover,
-.button-submit:focus {
-   background-color: rgb(200,200,200);
-}
-
-.name-card {
-  padding: 0.5rem;
-  border: 0.1rem solid #004525;
-  border-radius: 1.5rem;
-  font-size: 1rem;
-  transition: 0.1s;
-  margin-bottom: 1rem;
-}
-
-.name-card:hover {
-   border: 0.25rem solid #004525;
-
-}
-
-/* Reset button */
-.button-reset {
-  display: inline-block;
-  padding: 0.9rem;
-  color: #302F2F;
-  border: 1.5px solid #302F2F;
-  text-decoration: none;
-  transition-duration: 0.3s;
-  border-radius: 1.4rem;
-}
-
-.button-reset:hover,
-.button-reset:focus {
-   background-color: rgb(200,200,200);
-}
-
-.image-link img {
-  transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
-  border-radius: 1.5rem;
-}
-
-/* Hover + keyboard focus */
-.image-link:hover img,
-.image-link:focus img {
-  opacity: 0.85;
-}
-
-
-
-/* 
-  TEXT ELEMENTS -------------------
-*/
-
-.numbered-list li{
-  margin-bottom: 1rem;
-  color: #520505;
-}
-
-/* 
-  COMBINED ELEMENTS -------------------
-*/
-
-
-.product-listing {
-  position: relative;
-  width: 34.375rem;
-  border-radius: 1.5rem;
-  overflow: hidden; 
-}
-
-.product-listing img {
-  width: 100%;
-  max-height: 40rem;
-  display: block;
-  object-fit: cover;
-  
-}
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 4rem;
-  padding: 1.5rem;
-
-  display: flex;
-  align-items: center;   
-  justify-content: flex-start; 
-
-  box-sizing: border-box; 
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.4),
-    rgba(255,255,255,0.1)
-  );
-
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-
-  border-top: 1px solid rgba(255,255,255,0.2);
-
-  color: white;
-}
-
-.overlay h3 {
-  color: white;
-  font-weight: 500;
-}
-.payment-section {
-  gap: 0.5rem;
-  margin-top: 2rem;
-  padding: 1rem;
-}
-
-.radio-label {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-
-
-/* RESPONSIVE VIEW */
-
-@media (max-width: 48rem) {
-
-
-  nav {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  
-
-  .main-navigation {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-   .product-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 58.25rem) {
-
-.image-reference {
-  width: 100%;
-  height: auto;
-}
-}
-
-
-
-/* -----------------------------
-   FONTS
------------------------------ */
 
 @font-face {
   font-family: 'GT Eesti Text';
@@ -354,55 +9,69 @@ a:focus {
   src: url("fonts/Geoform-Light-BF6556c6e751770.otf") format("opentype");
 }
 
-/* -----------------------------
-   GLOBAL RESET
------------------------------ */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'GT Eesti Text', sans-serif;
+  color: #302F2F;
 }
 
 body {
-  font-family: 'GT Eesti Text', sans-serif;
   background-color: #E5E5E5;
-  color: #302F2F;
-  padding: 0;
+  font-weight: 500;
 }
 
-/* -----------------------------
-   TYPOGRAPHY
------------------------------ */
-
-h1, h2, h3, h4 {
-  font-family: 'GT Eesti Text', sans-serif;
+section {
+  margin-bottom: 4rem;
 }
+
 
 h1 {
-   font-size: 6vw;
-  white-space: nowrap;
-  font-weight: 300; 
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 300;
 }
 
 h2 {
   font-size: 6vw;
   white-space: nowrap;
-  font-weight: 300; 
+  font-weight: 300;
 }
 
-h3{
+h3 {
   font-size: 1.5rem;
   font-weight: 100;
 }
 
-p {
-  font-family: "Geoform-Light", sans-serif;
+h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-/* -----------------------------
-   NAVIGATION
------------------------------ */
+p {
+  font-family: "Geoform-Light", sans-serif;
+  margin-top: 0;
+}
+
+a {
+  color: #302F2F;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #302F2F;
+  text-decoration: none;
+}
+
+code {
+  background-color: #EEE;
+  padding: 0.5rem;
+  display: block;
+}
 
 .nav {
   display: flex;
@@ -420,7 +89,6 @@ p {
   gap: 1rem;
 }
 
-
 .logo-text {
   display: flex;
   flex-direction: column;
@@ -433,10 +101,9 @@ p {
   margin: 0;
 }
 
-/* email */
 .logo-text p {
   font-size: 1.2rem;
-  color: #ABABAB; 
+  color: #ABABAB;
   margin: 0;
 }
 
@@ -450,101 +117,33 @@ p {
   text-decoration: none;
   color: #302F2F;
   font-size: 1rem;
-  transition: 0.3s;
+  padding: 0;
+  transition: opacity 0.3s;
 }
 
 .menu a:hover {
   opacity: 0.6;
 }
 
-/* -----------------------------
-   HERO SECTION
------------------------------ */
-
-
-/* gradient strip image */
-.hero-bg {
-  position: absolute;
-  top: 12%;
-  left: 0;
-  width: 100%;
-  z-index: 0;
-}
-
-/* text on top */
-.hero-content {
-
-  position: relative;
-  z-index: 1;
-  max-width: 56.25rem;
-}
-
-.hero-content h1 {
-  font-size: clamp(3rem, 8vw, 6rem);
-  white-space: nowrap;
-  padding-left: 6rem;
-
-}
-
-.subtitle {
-  padding-left: 7rem;
-  font-size: 1.2rem;
-  color: #444;
-}
-
-/* -----------------------------
-   MAIN LAYOUT
------------------------------ */
-
-main {
-  max-width: none;
-  margin: 2rem 4rem;
-}
-
-/* -----------------------------
-   PROJECTS SECTION
------------------------------ */
-.projects {
-  position: relative;
-  padding: 2rem 0;
-}
-
-/* BIG blurred background text */
-.projects-bg {
-  position: absolute;
-  font-size: 8rem;
-  letter-spacing: 0.05em;;
-  color: rgba(0,0,0,0.30);
-  filter: blur(3px);
-  z-index: 0;
-  padding-top: 0.5rem;
-}
-
-/* row layout (NOT grid anymore) */
-.project-row {
-  padding-top: 4rem;
+.menu2 {
+  list-style: none;
   display: flex;
-  margin: 6rem auto 0;
-  max-width: 1200px;
   justify-content: center;
+  padding-top: 3rem;
+  gap: 20rem;
 }
 
-.project-card {
-  flex: 0 0 550px;
-  transition: 0.3s;
+.menu2 a {
+  text-decoration: none;
+  color: #302F2F;
+  font-size: 1rem;
+  padding: 0;
+  transition: opacity 0.3s;
 }
 
-.project-card img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  display: block;
+.menu2 a:hover {
+  opacity: 0.6;
 }
-
-.project-card:hover {
-  transform:translateY(-8px);
-}
-
 
 /* -----------------------------
    FOOTER
@@ -558,42 +157,229 @@ footer {
 }
 
 /* -----------------------------
-   RESPONSIVE
+   HOME PAGE — HERO
 ----------------------------- */
 
-@media (max-width: 768px) {
-
-  .nav {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .menu {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-content h2 {
-    font-size: 2.2rem;
-  }
-
+.hero-bg {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  opacity: 85%;
+  filter: blur(15px); /* I learnt how to make blur effect here: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/filter-function/blur */
+  pointer-events: none;
 }
 
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 56.25rem;
+}
 
+.hero-content h1 {
+  white-space: nowrap;
+  padding-left: 6rem;
+}
 
+.subtitle {
+  padding-left: 7rem;
+  font-size: 1.2rem;
+  color: #444;
+}
 
-/* ============================================================
-   PROJECT DETAIL PAGES  (mapastry.html / landing-pages.html)
-   Append this block to the bottom of main.css
-   ============================================================ */
- 
- 
-/* ---- HERO ---- */
- 
+/* -----------------------------
+   HOME PAGE — PROJECTS
+----------------------------- */
+
+main {
+  max-width: none;
+  margin: 2rem 4rem;
+}
+
+.projects {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.projects-bg {
+  position: absolute;
+  font-size: 8rem;
+  letter-spacing: 0.05em;
+  color: rgba(0, 0, 0, 0.30);
+  filter: blur(3px);
+  z-index: 0;
+  padding-top: 5.5rem;
+}
+
+.project-row {
+  padding-top: 4rem;
+  display: flex;
+  margin: 6rem auto 0;
+  max-width: 75rem;
+  justify-content: center;
+}
+
+.project-card {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 34.375rem;
+  transition: transform 0.3s;
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* learnt this here: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/aspect-ratio */
+  object-fit: cover;
+  display: block;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+/* -----------------------------
+   ABOUT PAGE
+----------------------------- */
+
+.about-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 5rem;
+  margin: 0 4rem 4rem;
+  padding-top: 2rem;
+}
+
+.about-photo img {
+  width: 100%;
+  max-width: 37rem;
+  object-fit: cover;
+  display: block;
+}
+
+.about-greeting {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #302F2F;
+}
+
+.about-bio {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #444;
+  margin-bottom: 2.5rem;
+}
+
+.about-bio strong {
+  font-weight: 700;
+  color: #302F2F;
+}
+
+.about-edu {
+  display: flex;
+  gap: 2rem;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.about-section-label {
+  font-size: 0.95rem;
+  color: #302F2F;
+  margin: 0;
+  font-weight: 500;
+}
+
+.about-edu-year {
+  font-size: 1rem;
+  color: #888;
+  white-space: nowrap;
+}
+
+.about-edu-detail {
+  margin-bottom: 2.5rem;
+}
+
+.about-edu-detail h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #302F2F;
+  margin-bottom: 0.2rem;
+}
+
+.about-edu-detail p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+}
+
+.about-resume {
+  margin-bottom: 2.5rem;
+}
+
+.btn-resume {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 0.75rem 1.2rem;
+  font-size: 1rem;
+  color: #302F2F;
+  border: 1.5px solid rgba(48, 47, 47, 0.45);
+  border-radius: 2rem;
+  text-decoration: none;
+  white-space: nowrap;
+  min-width: 14rem;
+  transition: 0.2s, border-color 0.2s;
+}
+
+.btn-resume:hover,
+.btn-resume:focus {
+  background: rgba(48, 47, 47, 0.07);
+  border-color: #302F2F;
+  color: #302F2F;
+}
+
+.about-contacts h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 0.9rem;
+  color: #302F2F;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* -----------------------------
+   PROJECT DETAIL PAGES
+----------------------------- */
+
+/* Hero */
 .project-hero {
   padding: 0;
 }
- 
+
+.hero-bgPR {
+  position: absolute;
+  top: 7%;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  opacity: 85%;
+  filter: blur(15px);
+}
+
 .project-title-row {
   display: flex;
   align-items: flex-start;
@@ -603,51 +389,7 @@ footer {
   z-index: 1;
   padding-left: 6rem;
 }
- 
-.project-title-row h1 {
-  font-size: clamp(2.5rem, 6vw, 5rem);
- 
-}
- 
 
- .hero-bgPR {
-  position: absolute;
-  top:7%;
-  left: 0;
-  width: 100%;
-  z-index: 0;
-  opacity: 85%;
-    filter: blur(15px);
-}
- 
-
- 
-/* ---- TAGLINE ---- */
- 
-.project-tagline {
-    padding-left:8rem;
-
-  position: relative;
-  z-index: 1;
-}
- 
-.project-tagline h2 {
-  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
-  font-weight: 300;
-  margin: 0;
-  white-space: normal;
-  line-height: 1.6;
-  color: #444;
-}
- 
- 
-/* ---- CONTENT SECTIONS ---- */
- 
-/* ============================================================
-   PROJECT DETAIL — two-column text/image sections
-   ============================================================ */
-
-/* Title + button on the same line */
 .project-title-group {
   display: flex;
   align-items: center;
@@ -657,7 +399,6 @@ footer {
   z-index: 1;
 }
 
-/* "Link to Website ↗" pill button */
 .btn-link {
   display: inline-flex;
   align-items: center;
@@ -681,7 +422,23 @@ footer {
   color: #302F2F;
 }
 
-/* Two-column section: image | text  OR  text | image */
+.project-tagline {
+  padding-left: 8rem;
+  position: relative;
+  z-index: 1;
+}
+
+.project-tagline p {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Two-column blocks */
+.project-sections {
+  padding: 2rem 0;
+}
+
 .project-block.two-col-text {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -689,7 +446,13 @@ footer {
   align-items: center;
 }
 
-/* Text column — vertically centred, text centred */
+.project-block.two-col-text2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
 .project-block-text.centered-text {
   display: flex;
   flex-direction: column;
@@ -706,77 +469,6 @@ footer {
   max-width: 20rem;
 }
 
-.project-block.two-col-text img {
-  max-width: 100%;
-  max-height: 50rem;
-  padding-left: 5rem;
-}
-
-/* Section headings inside content blocks */
-.section-heading {
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: #302F2F;
-  text-align: center;
-}
-
-
-/* Each Solution sub-item */
-.solution-item {
-  margin-top: 1.2rem;
-  text-align: center;
-}
-
-.solution-item h3 {
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: none;
-  letter-spacing: 0;
-  margin-bottom: 0.3rem;
-  color: #302F2F;
-}
-
-.solution-item p {
-  font-size: 0.85rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-
-/* Phone image — bigger, pushed to the right edge */
-.project-block-visual {
-  display: flex;
-  justify-content: flex-end;   /* align to right */
-}
-
-.project-block-visual img {
-  max-width: 100%; 
-  padding-right: 15rem;                /* take up most of the column */
-
-}
-
-
-.showcase{
-     display: grid;
-     grid-template-columns: 1fr;
-     justify-content: center;
-    margin: 4rem;
-
-}
-
-.showcase img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-}
-.project-block.two-col-text2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-}
-
-/* Text column — vertically centred, text centred */
 .project-block-text.centered-text2 {
   display: flex;
   flex-direction: column;
@@ -793,21 +485,78 @@ footer {
   max-width: 20rem;
 }
 
+.project-block.two-col-text img {
+  max-width: 100%;
+  max-height: 50rem;
+  padding-left: 5rem;
+}
+
 .project-block.two-col-text2 img {
   max-width: 100%;
   max-height: 50rem;
   padding-left: 10rem;
 }
 
-.project-block-visual2 img {
-  max-width: 100%; 
-   padding-right: 7rem;            /* take up most of the column */
+.project-block-visual {
+  display: flex;
+  justify-content: flex-end;
+}
 
+.project-block-visual img {
+  max-width: 100%;
+  padding-right: 15rem;
+}
+
+.project-block-visual2 img {
+  max-width: 100%;
+  padding-right: 7rem;
+}
+
+.section-heading {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #302F2F;
+  text-align: center;
+}
+
+.solution-heading {
+  margin-top: 1.5rem;
+}
+
+.solution-item {
+  margin-top: 1.2rem;
+  text-align: center;
+}
+
+.solution-item h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #302F2F;
+}
+
+.solution-item p {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.showcase {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin: 4rem;
+}
+
+.showcase img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .analysis {
   display: flex;
-  justify-content: center;   /* centers the whole block */
+  justify-content: center;
   gap: 5rem;
 }
 
@@ -815,16 +564,28 @@ footer {
   max-width: 18rem;
 }
 
-.challenges li{
-    padding-top: 1rem;
-      font-family: "Geoform-Light", sans-serif;
+.challenges li {
+  padding-top: 1rem;
+  font-family: "Geoform-Light", sans-serif;
 }
 
-.column p{
-    padding-top: 1rem;
-    line-height: 1.5rem;
+.column p {
+  padding-top: 1rem;
+  line-height: 1.5rem;
 }
-/* Footer nav — fix padding so links aren't cut off */
+
+.refl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.refl p {
+  padding-top: 1rem;
+  max-width: 45rem;
+}
+
 .project-footer-nav {
   padding: 3rem 4rem 2rem;
   margin-top: 4rem;
@@ -841,21 +602,248 @@ footer {
   text-decoration: none;
 }
 
-.refl{
-   display: flex;
-    flex-direction: column;  
-    align-items: center;      /* centers horizontally */
-    text-align: center;
+/* Style Guide */
+.sg-section-title {
+  font-size: 1.8rem !important;
+  white-space: normal !important;
+  margin: 2.5rem 0 0.5rem 2rem;
 }
 
-.refl p{
-    padding-top: 1rem;
-    max-width: 45rem;
+.sg-demo-h2 {
+  font-size: 2.5rem;
+  white-space: normal;
+  margin-bottom: 0.5rem;
 }
 
-/* Responsive: stack on mobile */
+.element h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.element h4 {
+  margin-top: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.element p {
+  margin-bottom: 0.6rem;
+}
+
+.element code {
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.element label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.element input,
+.element button {
+  margin-bottom: 0.8rem;
+}
+
+.styleGuide {
+  background-image: linear-gradient(
+    255deg,
+    #facb0e,
+    #f06ba8 30%,
+    #78bae6 65%,
+    #fff
+  );
+  padding: 1rem;
+}
+
+.element {
+  background: rgba(177, 177, 177, 0.8);
+  padding: 2rem;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 0.15rem solid black;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: none;
+}
+
+.button-nav {
+  display: inline-block;
+  padding: 1rem;
+  color: #302F2F;
+  border: 1.5px solid #302F2F;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border-radius: 1.7rem;
+}
+
+.button-nav:hover,
+.button-nav:focus {
+  background-color: rgb(200, 200, 200);
+}
+
+.button-submit,
+.button-reset {
+  display: inline-block;
+  padding: 0.9rem;
+  color: #302F2F;
+  border: 1.5px solid #302F2F;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border-radius: 1.4rem;
+  cursor: pointer;
+  background: none;
+}
+
+.button-submit:hover,
+.button-submit:focus,
+.button-reset:hover,
+.button-reset:focus {
+  background-color: rgb(200, 200, 200);
+}
+
+.email {
+  padding: 0.5rem;
+  border: 0.1rem solid #656565;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.email:hover {
+  border: 0.1rem solid #1b1a1a;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  gap: 10px;
+}
+
+.radio input {
+  display: none;
+}
+
+.custom-radio {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #787878;
+  border-radius: 50%;
+  position: relative;
+}
+
+.radio input:hover + .custom-radio,
+.radio input:focus + .custom-radio {
+  border-color: #302F2F;
+}
+
+.radio input:checked + .custom-radio {
+  border-color: #302F2F;
+}
+
+.radio input:checked + .custom-radio::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #302F2F;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-link img {
+  transition: transform 0.3s, opacity 0.3s;
+  border-radius: 1.5rem;
+}
+
+.image-link:hover img,
+.image-link:focus img {
+  opacity: 0.85;
+}
+
+.main-navigation {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.numbered-list li {
+  margin-bottom: 1rem;
+  color: #520505;
+}
+
+.product-listing {
+  position: relative;
+  width: 34.375rem;
+  border-radius: 1.5rem;
+}
+
+.product-listing img {
+  width: 100%;
+  max-height: 40rem;
+  display: block;
+  object-fit: cover;
+}
+
+.image-reference {
+  width: 56.25rem;
+  height: auto;
+}
+
+/* -----------------------------
+   RESPONSIVE
+----------------------------- */
+
+@media (max-width: 58.25rem) {
+  .image-reference {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 48rem) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .main-navigation {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 0 1.5rem 3rem;
+  }
+
+  .about-photo img {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 700px) {
-  .project-block.two-col-text {
+  .project-block.two-col-text,
+  .project-block.two-col-text2 {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
@@ -873,161 +861,3 @@ footer {
     align-items: flex-start;
   }
 }
-
-
- .hero-bg{
-      position: absolute;
-      top: 4rem;
-      left: 0;
-      width: 100%;
-      z-index: 0;
-      opacity: 85%;
-      filter: blur(15px);
-      pointer-events: none;
-    }
-
-    .about-content {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: start;
-      gap: 5rem;
-      margin: 0 4rem 4rem;
-      padding-top: 2rem;
-    }
-
-    .about-photo img {
-      width: 100%;
-      max-width: 37rem;
-      object-fit: cover;
-      display: block;
-    }
-
-    .about-text {
-      padding-top: 1rem;
-    }
-
-    .about-greeting {
-      font-size: 1.4rem;
-      font-weight: 500;
-      margin-bottom: 1rem;
-      color: #302F2F;
-    }
-
-    .about-bio {
-      font-size: 1rem;
-      line-height: 1.75;
-      color: #444;
-      margin-bottom: 2.5rem;
-    }
-
-    .about-bio strong {
-      font-weight: 700;
-      color: #302F2F;
-    }
-
-    .about-edu {
-      display: flex;
-      gap: 2rem;
-      align-items: baseline;
-      margin-bottom: 0.5rem;
-    }
-
-    .about-section-label {
-      font-size: 0.95rem;
-      color: #302F2F;
-      margin: 0;
-      font-weight: 500;
-    }
-
-    .about-edu-year {
-      font-size: 1rem;
-      color: #888;
-      white-space: nowrap;
-    }
-
-    .about-edu-detail {
-      margin-bottom: 2.5rem;
-    }
-
-    .about-edu-detail h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #302F2F;
-      margin-bottom: 0.2rem;
-    }
-
-    .about-edu-detail p {
-      font-size: 0.95rem;
-      color: #555;
-      margin: 0;
-    }
-
-    .about-resume {
-      margin-bottom: 2.5rem;
-    }
-
-    .btn-resume {
-      display: inline-flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 3rem;
-      padding: 0.75rem 1.2rem;
-      font-size: 1rem;
-      color: #302F2F;
-      border: 1.5px solid rgba(48, 47, 47, 0.45);
-      border-radius: 2rem;
-      text-decoration: none;
-      white-space: nowrap;
-      min-width: 14rem;
-      transition:  0.2s, border-color 0.2s;
-    }
-
-    .btn-resume:hover,
-    .btn-resume:focus {
-      background: rgba(48, 47, 47, 0.07);
-      border-color: #302F2F;
-      color: #302F2F;
-    }
-
-    .btn-resume .arrow {
-      font-size: 1.1rem;
-    }
-
-    .about-contacts h4 {
-      font-size: 1rem;
-      font-weight: 500;
-      text-transform: none;
-      letter-spacing: 0;
-      margin-bottom: 0.9rem;
-      color: #302F2F;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      margin-bottom: 0.6rem;
-      font-size: 0.95rem;
-      color: #444;
-    }
-
-    .contact-item svg {
-      flex-shrink: 0;
-      width: 1.2rem;
-      height: 1.2rem;
-      stroke: #302F2F;
-    }
-
-    @media (max-width: 768px) {
-      .about-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        margin: 0 1.5rem 3rem;
-      }
-
-      .about-photo img {
-        max-width: 100%;
-      }
-    }
