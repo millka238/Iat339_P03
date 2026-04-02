@@ -795,6 +795,32 @@ nav a:focus {
   height: auto;
 }
 
+
+.citations {
+padding-bottom: 3rem;
+}
+
+
+.citations {
+  margin-top: 10rem;
+  margin-left: 4rem;
+  margin-bottom: 6rem;
+  list-style: none;
+  padding: 0;
+}
+
+.citations li {
+  margin-bottom: 1rem;
+}
+
+.citations a {
+  text-decoration: none;
+  color: #AD4804;
+}
+
+.citations a:hover {
+  text-decoration: underline;
+}
 /* -----------------------------
    RESPONSIVE
 ----------------------------- */
